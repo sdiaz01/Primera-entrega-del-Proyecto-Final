@@ -121,6 +121,7 @@ function buscarReceta() {
                 let busqueda4 = (prompt("Ingresa el tiempo de la receta a buscar:")).toUpperCase()
                 const resultado4 = recetas.filter(receta => receta.tiempo.includes(busqueda4))
                 console.table(resultado4)
+                break
             default:
                 return "Opción no valida."
         }
