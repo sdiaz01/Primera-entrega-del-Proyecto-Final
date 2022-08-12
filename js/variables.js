@@ -1,0 +1,2 @@
+const recetas = []
+const ingredientes = []
