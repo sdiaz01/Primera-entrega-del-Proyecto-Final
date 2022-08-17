@@ -11,9 +11,9 @@ function generadorAutomatico() {
     ingredientes.push(new Ingrediente('FLAN', 'HUEVO', '5 HUEVOS'))
     ingredientes.push(new Ingrediente('FLAN', 'AZUCAR', '100 GRAMOS'))
     console.log("Se generaron recetas automaticamente.")
+    console.table(recetas)
 }
 
-generadorAutomatico()
 
 function nuevaReceta() {
     
@@ -165,8 +165,16 @@ function ordenarRecetas() {
 
 function mostrarIngredientes() {
     
-    let busquedaIng = (prompt("Ingresa la receta a buscar:")).toUpperCase()
+    let busquedaIng = (prompt("Ingresa la receta a mostrar:")).toUpperCase()
     const resultado = ingredientes.filter(ingrediente => ingrediente.nombre.includes(busquedaIng))
     console.table(resultado)
     
 }
+
+
+generadorAutomatico()
+nuevaReceta()
+buscarReceta()
+mostrarIngredientes()
+borrarReceta()
+calcularIMC()
